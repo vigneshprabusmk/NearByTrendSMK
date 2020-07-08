@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NearByTrendSMK</string>
+
+    <string name="app_name">Nearby-Trends</string>
+
+    <string name="title_activity_maps">Map</string>
+
+    <string name="setloc">Pin your Location</string>
+    <string name="getloc">Getting Address</string>
+    <!--Fetch Address-->
+
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+
+
 </resources>

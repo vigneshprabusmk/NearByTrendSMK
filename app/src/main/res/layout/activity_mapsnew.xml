@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/maping"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Screen.MapsActivity" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/setlocationMarkertext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="4dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/search"
+                android:drawableTint="#000"
+                android:drawablePadding="10dp"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="left"
+                android:hint="@string/getloc"
+                android:textAlignment="gravity"
+                android:layout_gravity="center|center_horizontal"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/locationMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/locationMarkertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_map"
+                android:gravity="center"
+                android:minWidth="170dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/setloc"
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/postalcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:minWidth="170dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/imageMarker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/map_marker_1"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/MAP_BTN_done"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="25dp"
+        android:layout_toEndOf="@+id/cancel"
+        android:layout_toRightOf="@+id/cancel"
+        android:text="Done"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/edittextmodel"
+        android:foreground="?android:selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <at.markushi.ui.CircleButton
+            android:id="@+id/cancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/clear"
+            app:cb_color="@color/white"
+            android:clickable="true"
+            app:cb_pressedRingWidth="8dip" />
+
+
+</RelativeLayout>
