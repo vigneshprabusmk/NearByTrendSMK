@@ -150,17 +150,17 @@ public class Maps_Activity extends AppCompatActivity implements OnMapReadyCallba
                         @Override
                         public void onClick(DialogInterface paramDialogInterface, int paramInt) {
 
-                            /*if (ActivityCompat.checkSelfPermission(Maps_Activity.this,
+                            if (ActivityCompat.checkSelfPermission(Maps_Activity.this,
                                     Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                                     ActivityCompat.checkSelfPermission(Maps_Activity.this,
                                             Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                                 ActivityCompat.requestPermissions(Maps_Activity.this,
                                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-
+                                Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                                startActivity(myIntent);
                                 // return;
-                            }*/
-                            Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                            startActivity(myIntent);
+                            }
+
                         }
                     });
                     dialog.setNegativeButton(Html.fromHtml("<font color='#000'>Cancel</font>"), new DialogInterface.OnClickListener() {
