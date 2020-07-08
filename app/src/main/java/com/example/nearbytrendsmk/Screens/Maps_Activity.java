@@ -139,7 +139,6 @@ public class Maps_Activity extends AppCompatActivity implements OnMapReadyCallba
 
 
         if (checkPlayServices()) {
-            if (Build.VERSION.SDK_INT >= 23) {
                 // If this check succeeds, proceed with normal processing.
                 // Otherwise, prompt user to get valid Play Services APK.
                 if (!AppUtils.isLocationEnabled(mContext)) {
@@ -158,6 +157,7 @@ public class Maps_Activity extends AppCompatActivity implements OnMapReadyCallba
                                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
                                 Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                                 startActivity(myIntent);
+
                                 // return;
                             }
 
@@ -180,7 +180,7 @@ public class Maps_Activity extends AppCompatActivity implements OnMapReadyCallba
 
         }
 
-    }
+
 
    /* @Override
     public void onRequestPermissionsResult(
