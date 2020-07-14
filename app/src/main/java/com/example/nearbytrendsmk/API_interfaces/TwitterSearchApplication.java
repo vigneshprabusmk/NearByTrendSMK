@@ -23,8 +23,6 @@ public class TwitterSearchApplication extends Application {
 	private TwitterServiceProvider mTwitterService;
 	private Bus bus = BusProvider.getInstance();
 
-
-
 	@Override
 	public void onCreate() {
 		super.onCreate();

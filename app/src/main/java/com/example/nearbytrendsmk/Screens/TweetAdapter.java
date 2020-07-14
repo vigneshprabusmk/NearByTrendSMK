@@ -113,29 +113,11 @@ public class TweetAdapter extends BaseAdapter {
 
 		}
 
-       /* if(tweetList.tweets.get(position).user.getProfile_url().isEmpty()){
-            imgView_proPic.setImageResource(R.drawable.howdy);
-
-        }*/
-		//else
-		{
-			//Picasso.get().load(tweetList.tweets.get(position).user.getProfile_url()).into(imgView_proPic);
-		}
-
 		holder.tv_likes.setText(String.valueOf(tweetList.tweets.get(position).user.getFavourites_count()));
 		holder.tv_comments.setText(tweetList.tweets.get(position).getRetweet_count()+"");
 		holder.tv_views.setText(tweetList.tweets.get(position).user.getStatuses_count()+"");
 
-
-
-
-
-
-
-
-
 		return row;
-
 
 	}
 
@@ -147,8 +129,6 @@ public class TweetAdapter extends BaseAdapter {
 		FrameLayout media_container;
 		ImageView thumbnail,moredots;
 		TextView tv_name ,tv_name2, tv_time, tv_likes, tv_comments, tv_status,tv_views;
-		//CircleImageView imgView_proPic;
-
 
 
 	}

@@ -111,6 +111,8 @@ public class MainActivity extends Activity implements FragmentManager.OnBackStac
 
                 mEditor.apply();
                 mEditor.commit();
+				NotificationHelper.scheduleRepeatingElapsedNotification(MainActivity.this);
+				NotificationHelper.disableBootReceiver(MainActivity.this);
 				finishAffinity();
 
 			}

@@ -184,38 +184,6 @@ public class Maps_Activity extends AppCompatActivity implements OnMapReadyCallba
 
 
 
-   /* @Override
-    public void onRequestPermissionsResult(
-            int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(Maps_Activity.this,
-                            "permission was granted, :)",
-                            Toast.LENGTH_LONG).show();
-                    mMap.getMyLocation();
-
-                } else {
-                    Toast.makeText(Maps_Activity.this,
-                            "permission denied, ...:(",
-                            Toast.LENGTH_LONG).show();
-                }
-                return;
-            }
-
-            // other 'case' lines to check for other
-            // permissions this app might request
-        }
-    }
-
-*/
-
-
-
-
 
     public void findviewbyid() {
 
