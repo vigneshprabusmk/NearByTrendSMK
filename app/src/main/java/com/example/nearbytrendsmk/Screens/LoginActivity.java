@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                     startMainActivity();
 
                     //show toast
-                    Toast.makeText(LoginActivity.this, "Login Successful.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login Sucessfully!", Toast.LENGTH_SHORT).show();
                 } else {
 
                     //if twitter session is null due to some reason then show error toast

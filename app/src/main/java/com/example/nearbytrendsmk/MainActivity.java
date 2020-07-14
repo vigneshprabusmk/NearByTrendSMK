@@ -103,17 +103,22 @@ public class MainActivity extends Activity implements FragmentManager.OnBackStac
 			@TargetApi(11)
 			public void onClick(DialogInterface dialog, int id) {
 
-				makeToast(MainActivity.this, "Logout sucessfully!");
+				makeToast(MainActivity.this, "Logout Sucessfully!");
                 sharedPreferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
+
+				//sharedPreferences = getSharedPreferences("general_prefs", MODE_PRIVATE);
                 SharedPreferences.Editor mEditor = sharedPreferences.edit();
                 mEditor.remove("user_id");
                 mEditor.remove("screen_name");
 
                 mEditor.apply();
                 mEditor.commit();
-				NotificationHelper.scheduleRepeatingElapsedNotification(MainActivity.this);
-				NotificationHelper.disableBootReceiver(MainActivity.this);
+
 				finishAffinity();
+
+				//NotificationHelper.scheduleRepeatingElapsedNotification(MainActivity.this);
+				NotificationHelper.disableBootReceiver(MainActivity.this);
+
 
 			}
 
