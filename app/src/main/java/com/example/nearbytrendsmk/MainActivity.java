@@ -114,10 +114,11 @@ public class MainActivity extends Activity implements FragmentManager.OnBackStac
                 mEditor.apply();
                 mEditor.commit();
 
+
 				finishAffinity();
 
 				//NotificationHelper.scheduleRepeatingElapsedNotification(MainActivity.this);
-				NotificationHelper.disableBootReceiver(MainActivity.this);
+				//NotificationHelper.disableBootReceiver(MainActivity.this);
 
 
 			}
@@ -133,7 +134,7 @@ public class MainActivity extends Activity implements FragmentManager.OnBackStac
 				finishAffinity();
 
 				NotificationHelper.scheduleRepeatingElapsedNotification(MainActivity.this);
-				NotificationHelper.enableBootReceiver(MainActivity.this);
+				//NotificationHelper.enableBootReceiver(MainActivity.this);
                 //NotificationHelper.scheduleRepeatingRTCNotification(MainActivity.this,"00","01");
                 //NotificationHelper.enableBootReceiver(MainActivity.this);
 
